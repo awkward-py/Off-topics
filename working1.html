@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="assets/img/ghost-img.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <title>404 Error</title>
+       <link rel="shortcut icon" href="./assets/images/logoo.png" type="image/svg+xml">
+      
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap");
+
+:root {
+    --header-height: 3.5rem;
+
+    --first-color: hsl(0, 0%, 100%);
+    --text-color: hsl(38, 8%, 8%);
+
+    --body-font: "Space Grotesk", sans-serif;
+    --biggest-font-size: 2.375rem;
+    --normal-font-size: 0.938rem;
+    --smaller-font-size: 0.75rem;
+}
+
+@media screen and (min-width: 1024px) {
+    :root {
+        --biggest-font-size: 5rem;
+        --normal-font-size: 1rem;
+        --smaller-font-size: 0.813rem;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1024px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.main {
+    overflow: hidden;
+}
+
+/* HEADER & NAV */
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo,
+.nav-toggle {
+    color: var(--text-color);
+    display: inline-flex;
+}
+
+.nav-logo {
+    font-weight: 700;
+}
+
+
+
+/* HOME */
+.home {
+    background-color: var(--first-color);
+    padding: 9rem 0 2rem;
+    height: 100vh;
+    display: grid;
+}
+
+.home-container {
+    display: grid;
+    align-content: center;
+    row-gap: 2.5rem;
+}
+
+.home-data {
+    text-align: center;
+}
+
+.home-subtitle {
+    display: block;
+}
+
+.home-title {
+    font-size: var(--biggest-font-size);
+    margin: 0.7rem 0;
+}
+
+.home-button {
+    margin-top: 2rem;
+    display: inline-block;
+    background-color: var(--text-color);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 3rem;
+    transition: 0.4s;
+}
+
+.home-button:hover {
+    box-shadow: 0 4px 12px hsla(28, 69%, 8%, 0.2);
+}
+
+.home-img img {
+    width: 230px;
+    animation: floaty 1.8s infinite alternate;
+}
+
+.home-img {
+    justify-self: center;
+}
+
+.home-shadow {
+    width: 130px;
+    height: 24px;
+    background-color: hsla(38, 21%, 19%, 0.16);
+    margin: 0 auto;
+    border-radius: 50%;
+    filter: blur(7px);
+    animation: shadow 1.8s infinite alternate;
+}
+
+
+
+@keyframes floaty {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(15px);
+    }
+}
+
+@keyframes shadow {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        transform: scale(0.85, 0.85);
+    }
+}
+
+/* BREAKPOINTS */
+
+/* For small devices */
+@media screen and (max-width: 320px) {
+    .home {
+        padding-top: 7rem;
+    }
+}
+
+/* For medium devices */
+@media screen and (min-width: 767px) {
+    .nav {
+        height: calc(var(--header-height) + 1.5rem);
+    }
+
+    .nav-toggle,
+    .nav-close {
+        display: none;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        column-gap: 3.5rem;
+    }
+}
+
+/* For large devices */
+@media screen and (min-width: 1024px) {
+    .home-container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        column-gap: 2rem;
+    }
+
+    .home-data {
+        text-align: initial;
+    }
+
+    .home-img img {
+        width: 400px;
+    }
+
+    .home-shadow {
+        width: 250px;
+        height: 40px;
+    }
+}
+
+@media screen and (min-width: 1048px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* For 2K resolutions (2048 x 1152, 2048 x 1536) */
+@media screen and (min-width: 2048px) {
+    body {
+        zoom: 1.7;
+    }
+
+    .home {
+        height: initial;
+        row-gap: 4rem;
+    }
+}
+
+/* For 4K resolutions (3840 x 2160, 4096 x 2160) */
+@media screen and (min-width: 3840px) {
+    body {
+        zoom: 3.1;
+    }
+}
+    </style>
+</head>
+
+<body>
+   
+  <header class="header">
+    <nav class="nav container">
+        <a href="#" class="nav-logo">IT Off-Topics</a></nav></header>
+    <!-- MAIN -->
+    <main class="main">
+        <!-- HOME -->
+        <section class="home">
+            <div class="home-container container">
+                <div class="home-data">
+                    <span class="home-subtitle">Error 404</span>
+                    <h1 class="home-title">Hey Buddy</h1>
+                    <p class="home-description">
+                        We are working on page <br> you are looking for.
+                    </p>
+                    <a href="https://iibg49d0uju1aj6puxozqq.on.drv.tw/IITinas/" class="home-button">Go Back</a>
+                </div>
+
+                <div class="home-img">
+                    <img src="assets/images/ghost-img.png" alt="">
+                    <div class="home-shadow"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

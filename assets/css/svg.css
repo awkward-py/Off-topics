@@ -1,0 +1,22 @@
+
+.card-title-wrapper .card-title {
+  display: flex;
+  align-items: center;
+}
+
+.card-title-wrapper .card-title .name {
+  margin-right: 6px; 
+}
+
+.card-title-wrapper .card-title .x1lliihq {
+  width: 14px; /* Adjust SVG width */
+  height: 14px; /* Adjust SVG height */
+  margin-bottom: 1px;
+}
+
+.card-title-wrapper .card-value1 .x1lliihq {
+  width: 13px; /* Adjust SVG width */
+  height: 13px; /* Adjust SVG height */
+  margin-left: 5px; /* Adjust margin between text and SVG */
+}
+
