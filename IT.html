@@ -17,7 +17,7 @@
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/hero-bg copy.css">
+
 
   <!-- 
     - google font link
@@ -34,25 +34,31 @@
   display: flex; /* Use flexbox to align items horizontally */
   flex-direction: column; 
   padding-top: 60px;
+  margin: 0;
+  line-height: 1.5;
+  color: rgb(167, 167, 167);
 
 }
 
-
-.hero-banner {margin-top: -100px; }
-
-/* Adjust button styles */
-.hero-content .btn-primary2 {
- background-color: black;
-  color: rgb(255, 255, 255);
-  margin: 10px; /* Add space around buttons */
-
+p {
+    margin-top: 20px;
 }
 
+
+.hero-content .button-container {
+    line-height: 1.5;
+  display: flex;
+  justify-content: left; /* Center the buttons horizontally */
+  align-items: left; /* Center the buttons vertically */
+}
+
+.hero-content .btn-primary2,
 .hero-content .btn-primary {
- background-color: black;
+    
+  background-color: black;
+  border-radius: 30px;
   color: rgb(255, 255, 255);
   margin: 10px; /* Add space around buttons */
-
 }
 
 
@@ -140,19 +146,23 @@
         <div class="container">
 
           <figure class="hero-banner">
-            <img src="./assets/images/coders.png" > 
+            <img src="./assets/images/it.jpg" > 
               </figure>
 
           <div class="hero-content">
 
-            <h1 class="h1 hero-title">IT/CSE GROUP</h1>
+            <h1 class="h1 hero-title3" >Welcome to the IT Group!</h1>
 
-            <p class="hero-text">
-              Choose your branch, IT or CSE to learn more.
-            </p>
+           \
+                <div class="button-container">
+                  <a href="/IT-2nd/index.html" class="btn-primary2">IT-2nd year</a>
+                  <a href="index.html" class="btn-primary">IT-3rd year</a>
+                </div>
+                <p class="info-text">This group consists of IT 2nd year and 3rd year students.</p>
+              </div>
+              
 
-            <a href="./index.html" class="btn btn-primary">IT Group  </a>
-            <a href="./working.html" class="btn btn-primary2">CSE Group</a>
+        
 
           </div>
 
